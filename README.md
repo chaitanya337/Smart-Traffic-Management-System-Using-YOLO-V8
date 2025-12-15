@@ -142,6 +142,12 @@ Model Evaluation Metrics:
 - Precision Confidence Curve
 - Recall Confidence Curve
 
+Simulation Video:
+- mp4 link: https://drive.google.com/file/d/1GBunkjUUwfUlcn-qfa5A0OXRqGIR14S9/view?usp=sharing
+- Complete demonstration of the Smart Traffic Management System in action
+- Shows YOLOv8 vehicle detection, SORT tracking, adaptive signal control, and emergency vehicle priority
+- Real-time statistics and lane-wise density visualization
+
 
 Key Features
 ------------
