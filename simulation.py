@@ -25,7 +25,7 @@ defaultMaximum = 60
 
 signals = []
 noOfSignals = 4
-simTime = 300       # change this to change time of simulation
+simTime = 300        # change this to change time of simulation
 timeElapsed = 0
 
 currentGreen = 0   # Indicates which signal is green
@@ -97,7 +97,7 @@ stops = {'right': [580,580,580], 'down': [320,320,320], 'left': [810,810,810], '
 mid = {'right': {'x':705, 'y':445}, 'down': {'x':695, 'y':450}, 'left': {'x':695, 'y':425}, 'up': {'x':695, 'y':400}}
 rotationAngle = 3
 
-# Gap between vehicles
+# Gap between vehicleseme
 gap = 15    # stopping gap
 gap2 = 15   # moving gap
 
@@ -302,22 +302,23 @@ def detectEmergencyVehicles():
 def displayEmergencyMessage(screen, screenWidth):
     """Display emergency message on screen"""
     global emergencyMessage, emergencyMessageTimer
-    if emergencyMessage and emergencyMessageTimer > 0:
-        # Create red background for emergency message
-        messageFont = pygame.font.Font(None, 48)  # Larger font for emergency
-        emergencyText = messageFont.render(emergencyMessage, True, (255, 255, 255))  # white text
-        textRect = emergencyText.get_rect()
-        textRect.center = (screenWidth // 2, 50)  # Top center of screen
-        
-        # Draw red background
-        pygame.draw.rect(screen, (255, 0, 0), (textRect.x - 10, textRect.y - 5, textRect.width + 20, textRect.height + 10))
-        
-        # Draw the text
-        screen.blit(emergencyText, textRect)
-        
-        # Decrease timer
-        emergencyMessageTimer -= 1
-        if emergencyMessageTimer <= 0:
+    if emergencyMessage:
+        if emergencyMessageTimer > 0:
+            # Create red background for emergency message
+            messageFont = pygame.font.Font(None, 50)  # Larger font for emergency
+            emergencyText = messageFont.render(emergencyMessage, True, (255, 255, 255))  # white text
+            textRect = emergencyText.get_rect()
+            textRect.center = (screenWidth // 2, 50)  # Top center of screen
+            
+            # Draw red background with padding
+            pygame.draw.rect(screen, (255, 0, 0), (textRect.x - 15, textRect.y - 10, textRect.width + 30, textRect.height + 20))
+            
+            # Draw the text
+            screen.blit(emergencyText, textRect)
+            
+            # Decrease timer
+            emergencyMessageTimer -= 1
+        else:
             emergencyMessage = ""
 
 # Initialization of signals with default values
@@ -404,8 +405,8 @@ def repeat():
                         print(f"Current Lane {currentGreen + 1} will complete its cycle")
                         
                         # Set emergency message for screen display
-                        emergencyMessage = f"Emergency vehicle detected at lane number {emergency_dir + 1}"
-                        emergencyMessageTimer = 180  # Display for 3 seconds (60 FPS * 3)
+                        emergencyMessage = f"emergency vehicle detected at lane number {emergency_dir + 1}"
+                        emergencyMessageTimer = 300  # Display for 5 seconds (60 FPS * 5)
                         
                         # Store emergency information
                         emergencyLane = emergency_dir
@@ -497,7 +498,7 @@ def updateValues():
 # Generating vehicles in the simulation
 def generateVehicles():
     last_emergency_time = 0  # ADDED FOR EMERGENCY SYSTEM
-    emergency_interval = 90  # ADDED FOR EMERGENCY SYSTEM - Emergency vehicle every 90 seconds
+    emergency_interval = 90  # ADDED FOR EMERGENCY SYSTEM - Emergency vehicle every 80 seconds
     
     while(True):
         current_time = timeElapsed  # ADDED FOR EMERGENCY SYSTEM
