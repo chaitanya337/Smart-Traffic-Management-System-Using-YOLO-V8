@@ -142,7 +142,7 @@ Thumbs.db
 desktop.ini
 
 # Project specific
-*.mp4
+# *.mp4  # Commented out to allow demo videos
 *.avi
 *.mov
 videos/
