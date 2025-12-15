@@ -5,6 +5,18 @@ Project Overview
 ----------------
 Smart Traffic Management System is a Python-based AI application that uses YOLOv8 for real-time vehicle detection and SORT algorithm for automated tracking and density calculation. The system dynamically adjusts traffic signal timings based on real-time traffic conditions and provides automatic priority for emergency vehicles (ambulances, fire trucks, police cars).
 
+
+## Demo Videos 🎥
+
+### • System Demo:
+
+https://github.com/chaitanya337/Smart-Traffic-Management-System-Using-YOLO-V8/raw/master/simulation%20output.mp4
+
+> Explore the intelligence of our Smart Traffic Management System in action. This demo showcases real-time vehicle detection, adaptive signal control, and emergency vehicle prioritization powered by YOLOv8.
+
+---
+
+
 Features
 --------
 - Real-time vehicle detection using YOLOv8 (cars, buses, trucks, bikes, autos, emergency vehicles)
