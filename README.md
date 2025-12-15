@@ -10,7 +10,9 @@ Smart Traffic Management System is a Python-based AI application that uses YOLOv
 
 ### • System Demo:
 
-https://github.com/chaitanya337/Smart-Traffic-Management-System-Using-YOLO-V8/raw/master/simulation%20output.mp4
+https://github.com/user-attachments/assets/simulation-output.mp4
+
+![Demo Video](https://github.com/chaitanya337/Smart-Traffic-Management-System-Using-YOLO-V8/raw/master/simulation%20output.mp4)
 
 > Explore the intelligence of our Smart Traffic Management System in action. This demo showcases real-time vehicle detection, adaptive signal control, and emergency vehicle prioritization powered by YOLOv8.
 
